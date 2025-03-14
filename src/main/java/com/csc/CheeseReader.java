@@ -14,10 +14,18 @@ public class CheeseReader {
         cheeseList = new CheeseList();
         cheeseParser = new CheeseParser();
     }
+    void clearLine() {
+        try {
+            bufferedReader.readLine();
+        } catch (Exception e) {
+            System.err.println(e);
+        }
+    }
     CheeseList readCheese() {
         try {
             fileReader = new FileReader(fileName);
             bufferedReader = new BufferedReader(fileReader);
+//            clearLine();
             String line;
             while((line = bufferedReader.readLine()) != null) {
                 cheeseList.addCheese(cheeseParser.parseCheese(line));

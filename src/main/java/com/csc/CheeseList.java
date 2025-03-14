@@ -3,7 +3,7 @@ package com.csc;
 import java.util.ArrayList;
 
 public class CheeseList {
-    ArrayList<CheeseEntry> cheeseEntries;
+    private ArrayList<CheeseEntry> cheeseEntries;
     CheeseList() {
         cheeseEntries = new ArrayList<CheeseEntry>();
     }
